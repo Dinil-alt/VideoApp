@@ -7,7 +7,7 @@ import { uplaodVideo } from '../Services/allApi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Add(setUploadVideoServerResponse) {
+function Add({setUploadVideoServerResponse}) {
   const [show,setShow] =useState(false);
   
   const [video,setVideo]=useState({id:"",caption:"",url:"",embededlink:""})
@@ -42,6 +42,7 @@ console.log(video);
       const response = await uplaodVideo(video)
       // console.log(response);
       if(response.status>200 && response.status<300){
+        setUploadVideoServerResponse(response.data)
         toast.success(`${response.data.caption} video succesfully uploaded`)
 
         // hide modal

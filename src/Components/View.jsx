@@ -3,7 +3,7 @@ import { Col, Row } from 'react-bootstrap'
 import VideoCard from '../Components/VideoCard'
 import { getAllvideos } from '../Services/allApi'
 
-function View({setUploadVideoServerResponse}) {
+function View({uploadVideoServerResponse}) {
   const [allvideo,setAllvideo]=useState([])
   const [deleteVideoStatus,setDeleteVideoStatus]= useState(false)
   const getUploadVideos = async ()=>{
@@ -16,7 +16,7 @@ function View({setUploadVideoServerResponse}) {
     getUploadVideos()
     setDeleteVideoStatus(false);
 
-  },[setUploadVideoServerResponse,deleteVideoStatus])
+  },[uploadVideoServerResponse,deleteVideoStatus])
 
   console.log(allvideo);
   return (
