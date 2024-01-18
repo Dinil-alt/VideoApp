@@ -7,10 +7,11 @@ import WatchHistory from './Pages/WatchHistory';
 import { Route,Routes } from 'react-router-dom';
 import Footer from './Components/Footer';
 import Homes from './Pages/Homes';
+import Header from './Components/Header';
 function App() {
   return (
-    <div className="App">
-        <h1 className='ms-2' style={{fontFamily:'Times new roman',fontWeight:'bolder'}}>Video Player</h1>
+    <div className="App ">
+      <Header/>
         <Routes>
           <Route path ="/" element={<Landingpage/>}/>
           <Route path ="/Homes" element={<Homes/>}/>

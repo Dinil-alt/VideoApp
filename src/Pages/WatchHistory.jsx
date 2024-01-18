@@ -37,7 +37,6 @@ function WatchHistory() {
             <tr>
               <th>#</th>
               <th>Caption</th>
-              <th>URL</th>
               <th>Timstrap</th>
             </tr>
           </thead>
@@ -47,7 +46,6 @@ function WatchHistory() {
                 <tr key={index}>
                 <td>{index+1}</td>
                 <td>{item?.caption}</td>
-                <td>{item?.embedLink}</td>
                 <td>{item?.timeStamp}</td>
                 <td><button className='btn btn-danger' onClick={()=> handleDeleteHistory(item?.id)} >Remove</button></td>
               </tr>

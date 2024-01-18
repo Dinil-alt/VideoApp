@@ -1,15 +1,16 @@
 import React from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import Header from '../Components/Header';
 function Landingpage() {
   const navigateByUrl= useNavigate();
 
   return (
     <>
-    <Row className='p-5 mt-5 align-item-center justify-content-between w-100 bg-black' >
+    <Row className='pt-5 pb-5 mt-5 align-item-center justify-content-between w-100 bg-black' >
       <Col></Col>
-      <Col lg={4}><h3 className='text-white'>Welcome to <span className='text-success'>Video Player</span></h3>
-      <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur at magnam, aut ab corporis est minima? Eaque nobis totam labore dignissimos accusantium dolorum veniam, recusandae impedit quia culpa cumque.</p>
+      <Col lg={4}><h3 className='text-white'>Welcome to <span className='text-success'>watchIt</span></h3>
+      <p className='text-white'> watchIt can be used to play audio and video files and can help users organize their multimedia collection. In this, users can even categorize the videos according to their choices.</p>
       <Button className='btn btn-success' onClick={()=>navigateByUrl('/Homes')} > Get Started </Button>
       </Col>
       <Col lg={6}>
@@ -18,15 +19,14 @@ function Landingpage() {
       <Col></Col>
     </Row>
 
-    <Row style={{justifyContent:"space-evenly", margin:"20px"}}>
+    <Row className='w-100' style={{justifyContent:"space-evenly", margin:"20px"}}>
       <h3 style={{textAlign:"center"}}>Features</h3>
       <Card style={{ width: '18rem' }}>
-      <Card.Img style={{height:"200px" , paddingTop:"12px" }} variant="top" src="https://cdn.pixabay.com/animation/2023/10/10/13/26/13-26-45-476_512.gif" />
+      <Card.Img style={{height:"200px" , paddingTop:"12px", background:'black' }} variant="top" src="https://cdn.pixabay.com/animation/2023/10/22/03/31/03-31-40-761_512.gif" />
       <Card.Body>
-        <Card.Title>Save Videos</Card.Title>
+        <Card.Title style={{color:"black"}}>Save Videos</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Any videos can be saved within the application and can be opened from their itself.
         </Card.Text>
       </Card.Body>
     </Card>
@@ -34,10 +34,9 @@ function Landingpage() {
     <Card style={{ width: '18rem', paddingTop:"12px"  }}>
       <Card.Img style={{height:"200px"}} variant="top" src="https://i.gifer.com/origin/55/554818561cbf36d813ef2010cc9d66cc.gif" />
       <Card.Body>
-        <Card.Title>Managing</Card.Title>
+        <Card.Title style={{color:"black"}}>Managing</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Can easily manage videos according to users choices.
         </Card.Text>
       </Card.Body>
     </Card>
@@ -45,16 +44,15 @@ function Landingpage() {
     <Card style={{ width: '18rem' , paddingTop:"12px"  }}>
       <Card.Img style={{height:"200px"}} variant="top" src="https://i.gifer.com/7s3p.gif" />
       <Card.Body>
-        <Card.Title>Categorized Videos</Card.Title>
+        <Card.Title style={{color:"black"}}>Categorized Videos</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Can easily categorize videos based users choice.
         </Card.Text>
       </Card.Body>
     </Card>
 
     </Row>
-    <Row className='mb-5'  >
+    <Row className='mb-5 w-100'  >
       <Col></Col>
       <Col lg={5} className='p-5'>
         <h4><b>Simple,Fast and Powerful</b></h4>

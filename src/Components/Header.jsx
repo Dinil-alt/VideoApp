@@ -10,8 +10,7 @@ function Header() {
         <Container>
           <Navbar.Brand>
             <Link to={'/'} className='fs-4' style={{textDecoration:'none', color:'black'}}>
-            <i class="fa-regular fa-circle-play"></i>
-            Video App
+            <h1 className='text-warning border border-2 border-black p-4 bg-black rounded' ><i class="fa-regular fa-circle-play"></i> watchIt</h1>
             </Link>
           
           </Navbar.Brand>
